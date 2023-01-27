@@ -11,20 +11,37 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(10, minmax(100px, auto));
     grid-template-areas: 
-    'header header header header header'
+    'header header header header header header'
     'main main main main main main'
-    'footer footer footer footer';
+    'footer footer footer footer footer footer';
 }
 .header {
     grid-area: header;
     background-color: lightblue;
 }
 .nav {
-    
+    padding: 35px 20px;
 }
+
+.nav_box {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.nav_box .nav_list > .nav_link:hover  {
+    color: red;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
 .main {
     grid-area: main;
+    background: black;
+    height: 100vh;
 }
 .footer {
     grid-area: footer;
+    background-color: lightblue;
 }
